@@ -1,3 +1,4 @@
+```
 # hacker-screensaverhacker-screensaver/
 │
 ├── index.html
@@ -9,3 +10,4 @@
 │
 └── styles/
     └── screensaver.css       ← keeps HTML clean
+```
