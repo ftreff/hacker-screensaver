@@ -1,13 +1,13 @@
 ```
-# hacker-screensaverhacker-screensaver/
+hacker-screensaver/
 │
 ├── index.html
 ├── screensaver.js
-├── assets/
-│   ├── background.png        ← your hacker wallpaper 
-│   ├── skull.png             ← ASCII skull overlay 
-│   └── nodes/                ← device icons 
+├── styles/
+│   └── screensaver.css
 │
-└── styles/
-    └── screensaver.css       ← keeps HTML clean
+└── assets/
+    ├── background.png      ← Hacker wallpaper
+    ├── skull.png           ← ASCII skull overlay 
+    └── nodes/              ← Device icons
 ```
