@@ -1,0 +1,75 @@
+/* styles/screensaver.css */
+
+/* Reset & base layout */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  overflow: hidden;
+  font-family: monospace;
+}
+
+/* Hide scrollbars and cursor for screensaver feel */
+body {
+  cursor: none;
+}
+
+/* Fullscreen canvas */
+#screen {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Optional: subtle vignette overlay using pseudo-element */
+/* This will darken the edges slightly to keep the center focus */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at center,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.35) 65%,
+      rgba(0, 0, 0, 0.75) 100%);
+  z-index: 10;
+}
+
+/* Optional initial fade-in of the whole scene */
+body {
+  animation: screensaverFadeIn 1.5s ease-out forwards;
+  background-color: #000;
+}
+
+@keyframes screensaverFadeIn {
+  0% {
+    opacity: 0;
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+/* Utility class if you ever want to toggle a “screensaver mode” from JS */
+.screensaver-active {
+  cursor: none;
+}
+
+/* If you later add any debug overlays or prompts, you can style them here */
+.debug-overlay {
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  padding: 4px 8px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #00ff99;
+  font-size: 12px;
+  z-index: 20;
+  border: 1px solid rgba(0, 255, 153, 0.4);
+  border-radius: 4px;
+}
